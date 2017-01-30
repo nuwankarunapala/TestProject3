@@ -1,0 +1,55 @@
+<ion-side-menus ng-controller="sideMenuControler">
+    <ion-side-menu-content>
+        <ion-nav-bar class=" bar-positive nav-bar-color">
+            <ion-nav-back-button class="button-clear">
+                <div class="buttons">
+                    <button class="button icon button-clear ion-navicon-round" ng-click="toggleLeft()">
+                
+            </button>
+                </div>
+            </ion-nav-back-button>
+        </ion-nav-bar>
+        <nav mfb-menu position="br" back effect="zoomin" label="hover here" active-icon="ion-edit" resting-icon="ion-plus-round" toggling-method="click">
+            <button mfb-button icon="flaticon-social" label="Adicione um artista"></button>
+            <button mfb-button icon="flaticon-music" label="Artistas"></button>
+            <button mfb-button icon="flaticon-people" label="Pesquisar"></button>
+            <button mfb-button icon="flaticon-search" label="Meus contatos favoritos"></button>
+            <button mfb-button icon="flaticon-social-1" label="Avaliar aplicativo"></button>
+
+        </nav>
+        <ion-content>
+            <ion-list>
+                <ion-item ng-repeat="image in images" style="padding: 1px">
+                    <img ng-src="{{image.link}}">
+                </ion-item>
+            </ion-list>
+            <ion-content>
+    </ion-side-menu-content>
+
+    <ion-side-menu side="left">
+        <ion-content style="background: #ba303d;">
+            <div class="col"> <img style="margin: 0px;padding: 0px;width: 100%;" ng-src="../img/back1.png"> </img>
+            </div>
+
+
+            <a href="#/search" style="background: #ba303d" class="item  menuItem" href="#">
+                <i class="flaticon-social" style="padding-left: 0px;margin:0px ;margin-right: 20px"></i> Adicione um artista
+            </a>
+
+            <a style="background: #ba303d" class="item  menuItem" href="#">
+                <i class="flaticon-music" style="padding-left: 0px;margin:0px ;margin-right: 20px"></i> Artistas
+            </a>
+
+            <a style="background: #ba303d" class="item  menuItem" href="#">
+                <i class="flaticon-people" style="padding-left: 0px;margin:0px ;margin-right: 20px"></i> Pesquisar
+            </a>
+            <a style="background: #ba303d" class="item  menuItem" href="#">
+                <i class="flaticon-search" style="padding-left: 0px;margin:0px ;margin-right: 20px"></i> Meus contatos favoritos
+            </a>
+            <a style="background: #ba303d" class="item  menuItem" href="#">
+                <i class="flaticon-social-1" style="padding-left: 0px;margin:0px ;margin-right: 20px"></i> Avaliar aplicativo
+            </a>
+
+            </div>
+    </ion-side-menu>
+</ion-side-menus>
